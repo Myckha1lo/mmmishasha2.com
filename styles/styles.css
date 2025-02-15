@@ -1,0 +1,51 @@
+body {
+    background: linear-gradient(140deg, #a30000 0%, #000000 83%);
+    font-family: 'Rubik Mono One', sans-serif;
+    color: #15b300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.accordion {
+    width: 400px;
+    max-width: 100%;
+    border: 2px solid #15b300;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion label {
+    display: block;
+    background: #000;
+    color: #15b300;
+    padding: 15px;
+    cursor: pointer;
+    border-bottom: 2px solid #15b300;
+    transition: background 0.3s;
+}
+
+.accordion label:hover {
+    background: #15b300;
+    color: #000;
+}
+
+.accordion input {
+    display: none;
+}
+
+.accordion .content {
+    max-height: 0;
+    overflow: hidden;
+    background: #222;
+    color: #fff;
+    padding: 0 15px;
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.accordion input:checked + label + .content {
+    max-height: 150px;
+    padding: 15px;
+}
